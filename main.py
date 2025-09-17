@@ -852,29 +852,29 @@ async def txt_handler(bot: Client, m: Message):
 
             try:
                 cc = (
+    f"<b>──────  <i>VID ID </i>: {str(count).zfill(3)}  ──────</b>\n\n"
+    f"<b>🎥 ᴛɪᴛʟᴇ</b> : {name1}\n\n"
     f"<blockquote>"
-    f"──────  <i>VID ID</i> : {str(count).zfill(3)}  ──────\n\n"
-    f"🎥 <b>ᴛɪᴛʟᴇ :</b> {name1}\n\n"
-    f"💠 <b>ʙᴀᴛᴄʜ :</b> {b_name}\n\n"
-    f"📥 <b>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
-    f"</blockquote>"
+    f"<b>💠 ʙᴀᴛᴄʜ :</b> {b_name}\n"
+    f"</blockquote>\n"
+    f"<b> 📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
 )
                 cc1 = (
+    f"<b>──────  <i>PDF ID </i>: {str(count).zfill(3)}  ──────</b>\n\n"
+    f"<b>📑 ᴛɪᴛʟᴇ</b> : {name1}\n\n"
     f"<blockquote>"
-    f"──────  <i>PDF ID</i> : {str(count).zfill(3)}  ──────\n\n"
-    f"📑 <b>ᴛɪᴛʟᴇ :</b> {name1}\n\n"
-    f"💠 <b>ʙᴀᴛᴄʜ :</b> {b_name}\n\n"
-    f"📥 <b>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
-    f"</blockquote>"
+    f"<b>💠 ʙᴀᴛᴄʜ :</b> {b_name}\n"
+    f"</blockquote>\n"
+    f"<b> 📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
 )
                 cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n' 
                 ccimg = (
+    f"<b>──────  <i>IMG ID </i>: {str(count).zfill(3)}  ──────</b>\n\n"
+    f"<b>🖼️ ᴛɪᴛʟᴇ</b> : {name1}\n\n"
     f"<blockquote>"
-    f"──────  <i>IMG ID</i> : {str(count).zfill(3)}  ──────\n\n"
-    f"🖼️ <b>ᴛɪᴛʟᴇ :</b> {name1}\n\n"
-    f"💠 <b>ʙᴀᴛᴄʜ :</b> {b_name}\n\n"
-    f"📥 <b>ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
-    f"</blockquote>"
+    f"<b>💠 ʙᴀᴛᴄʜ :</b> {b_name}\n"
+    f"</blockquote>\n"
+    f"<b> 📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ :</b> {CR}"
 )
                 ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1} .mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
                 cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1} .html`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**Extracted by➤**{CR}\n'
