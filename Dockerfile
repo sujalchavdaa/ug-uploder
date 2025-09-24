@@ -1,4 +1,4 @@
-# ✅ Base image: Best stable Python version
+# ✅ Base image: Stable Python version
 FROM python:3.10.13-slim
 
 # ✅ Set working directory
@@ -21,10 +21,14 @@ COPY . .
 # ✅ Make mp4decrypt executable (if present)
 RUN chmod +x /app/tools/mp4decrypt || true
 
-# ✅ Upgrade pip and install Python packages
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r ugbots.txt \
-    && pip install --no-cache-dir -U yt-dlp
+# ✅ Upgrade pip + setuptools + wheel (for stability)
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# ✅ Install Python requirements (force official PyPI index to avoid JSON errors)
+RUN pip install --no-cache-dir -r ugbots.txt --index-url https://pypi.org/simple
+
+# ✅ Install latest yt-dlp
+RUN pip install --no-cache-dir -U yt-dlp
 
 # ✅ Remove pyrofork if accidentally included
 RUN pip uninstall -y pyrofork || true
