@@ -684,6 +684,9 @@ async def txt_handler(bot: Client, m: Message):
 
             elif 'edge-cache-token' in url:
                 url = f"https://hls-proxy-lucifer.onrender.com/stream?url={url}"
+
+            elif 'appx-pdf-keyset' in url:
+                url = f"https://hls-proxy-lucifer.onrender.com/pdf?url={url}"
             
             if "acecwply" in url:
                 cmd = f'yt-dlp -o "{name}.%(ext)s" -f "bestvideo[height<={raw_text2}]+bestaudio" --hls-prefer-ffmpeg --no-keep-video --remux-video mkv --no-warning "{url}"'
